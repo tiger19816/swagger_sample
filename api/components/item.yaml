@@ -1,0 +1,10 @@
+type: object
+properties:
+  itemId:
+    type: integer
+    description: 商品ID
+    example: 100001
+  itemName:
+    type: string
+    description: 商品名
+    example: 商品名
