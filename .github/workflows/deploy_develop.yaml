@@ -1,8 +1,8 @@
-name: Deploy Test
+name: Deploy Develop
 on:
   push:
     branches:
-      - main
+      - develop
     paths:
       - api/**
 permissions:
@@ -13,10 +13,11 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout main
+      - name: checkout develop
         uses: actions/checkout@v3
         with:
-          path: main
+          ref: develop
+          path: develop
       - name: checkout gh-pages
         uses: actions/checkout@v3
         with:
@@ -24,11 +25,11 @@ jobs:
           path: gh-pages
       - name: copy files
         run: |
-          mkdir -p gh-pages/docs/main
-          cp -rf main/api/* gh-pages/docs/main
+          mkdir -p gh-pages/docs/develop
+          cp -rf develop/api/* gh-pages/docs/develop
           cd gh-pages
           git config user.name action-user
           git config user.email action@github.com
           git add .
-          git commit -m "action"
+          git commit -m "deploy develop branche"
           git push
