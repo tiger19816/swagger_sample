@@ -3,7 +3,7 @@ info:
   version: 0.0.1
   title: API仕様書サンプル2
   description: |
-    サンプルで作成したAPI仕様書
+    サンプルとして作成したAPI仕様書2
 paths:
   /items/{itemId}:
     $ref: ./paths/items_item_id.yaml

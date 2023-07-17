@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - api/**
 permissions:
   actions: write
   checks: write
@@ -22,7 +24,8 @@ jobs:
           path: gh-pages
       - name: copy files
         run: |
-          cp -rf main/api gh-pages/docs/api
+          mkdir -p gh-pages/docs/main
+          cp -rf main/api/* gh-pages/docs/main
           cd gh-pages
           git config user.name action-user
           git config user.email action@github.com
