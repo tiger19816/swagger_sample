@@ -1,0 +1,16 @@
+openapi: 3.0.0
+info:
+  version: 0.0.1
+  title: API仕様書サンプル2
+  description: |
+    サンプルとして作成したAPI仕様書2
+paths:
+  /items/{itemId}:
+    $ref: ./paths/items_item_id.yaml
+components:
+  schemas:
+    item:
+      $ref: ../components/item.yaml
+tags:
+  - name: items
+    description: 商品関連

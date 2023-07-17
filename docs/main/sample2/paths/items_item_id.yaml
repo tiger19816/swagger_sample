@@ -1,0 +1,20 @@
+get:
+  tags:
+    - items
+  summary: 商品詳細取得
+  description: |
+    商品詳細を取得する
+  parameters:
+    - name: itemId
+      in: path
+      description: 商品ID
+      required: false
+      schema:
+        type: integer
+  responses:
+    '200':
+      description: 商品詳細
+      content:
+        application/json:
+          schema:
+            $ref: '../index.yaml#/components/schemas/item'
