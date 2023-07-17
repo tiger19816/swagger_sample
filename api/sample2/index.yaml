@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   version: 0.0.1
-  title: API仕様書サンプル2
+  title: API仕様書サンプル2(開発)
   description: |
     サンプルとして作成したAPI仕様書2
 paths:
