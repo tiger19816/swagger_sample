@@ -3,30 +3,20 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
-    <title>Swagger UI</title>
-    <link rel="stylesheet" type="text/css" href="./swagger-ui/swagger-ui.css" />
-    <link rel="stylesheet" type="text/css" href="./swagger-ui/index.css" />
-    <link rel="icon" type="image/png" href="./swagger-ui/favicon-32x32.png" sizes="32x32" />
-    <link rel="icon" type="image/png" href="./swagger-ui/favicon-16x16.png" sizes="16x16" />
+    <title>トップページ</title>
   </head>
 
   <body>
-    <div id="swagger-ui"></div>
-    <script src="./swagger-ui/swagger-ui-bundle.js" charset="UTF-8"> </script>
-    <script src="./swagger-ui/swagger-ui-standalone-preset.js" charset="UTF-8"> </script>
-    <script src="./swagger-ui/swagger-initializer.js" charset="UTF-8"> </script>
-    <script>
-      window.onload = () => {
-        window.ui = SwaggerUIBundle({
-          url: './api/sample1/index.yaml',
-          dom_id: '#swagger-ui',
-          presets: [
-            SwaggerUIBundle.presets.apis,
-            SwaggerUIStandalonePreset
-          ],
-          layout: "StandaloneLayout",
-        });
-      };
-    </script>
+    <h1>API仕様書</h1>
+    <h2>mainブランチ</h2>
+    <ul>
+      <li><a href="./main_sample1.html">API仕様書サンプル1</a></li>
+      <li><a href="./main_sample1.html">API仕様書サンプル2</a></li>
+    </ul>
+    <h2>developブランチ</h2>
+    <ul>
+      <li><a href="./develop_sample1.html">API仕様書サンプル1</a></li>
+      <li><a href="./develop_sample2.html">API仕様書サンプル2</a></li>
+    </ul>
   </body>
 </html>
